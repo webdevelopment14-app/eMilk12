@@ -1,0 +1,137 @@
+.delivery-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5e8;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.delivery-form h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.delivery-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-form div {
+    margin-bottom: 25px;
+}
+
+.delivery-form label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+    color: #495057;
+    font-size: 18px;
+}
+
+.delivery-form input, .delivery-form select, .delivery-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.delivery-form input:focus, .delivery-form select:focus, .delivery-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+.delivery-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-form button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .delivery-form {
+        padding: 25px;
+    }
+
+    .delivery-form h2 {
+        font-size: 38px;
+    }
+
+    .delivery-form button {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .delivery-form {
+        max-width: 90%; /* Increase width for larger devices */
+    }
+
+    .delivery-form h2 {
+        font-size: 34px;
+    }
+
+    .delivery-form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery-form {
+        padding: 20px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .delivery-form h2 {
+        font-size: 30px;
+    }
+
+    .delivery-form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .delivery-form {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .delivery-form h2 {
+        font-size: 28px;
+    }
+
+    .delivery-form input, .delivery-form select, .delivery-form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .delivery-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

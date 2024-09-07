@@ -1,0 +1,286 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('https://img.freepik.com/premium-photo/milk-splash-isolated-black-background-close-up_99297-94.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: slideInFormal 1s ease-out;
+  flex-direction: column;
+}
+
+@keyframes slideInFormal {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.welcome-section {
+  display: none;
+}
+
+.login-section {
+  padding: 20px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+  color: blue;
+}
+
+.login-section label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: left;
+}
+
+.login-section input {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-toggle .eye-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #333;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.password-toggle .eye-icon .pupil {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.password-toggle.typing .eye-icon .pupil {
+  transform: translate(-70%, -50%);
+}
+
+.password-toggle:hover {
+  color: #f35d22;
+}
+
+.login-section button {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.login-section button:hover:not(.filled) {
+  animation: seaSaw 0.4s infinite;
+}
+
+@keyframes seaSaw {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-15px); }
+  50% { transform: translateX(15px); }
+  75% { transform: translateX(-15px); }
+  100% { transform: translateX(0); }
+}
+
+.login-section button.filled:hover {
+  animation: none;
+}
+
+.login-section .forgot-password {
+  text-align: right;
+}
+
+.login-section .forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-section .forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.login-section p {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-section p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-section p a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+  }
+
+  .login-section h2 {
+    font-size: 22px;
+  }
+
+  .login-section input {
+    padding: 8px;
+  }
+
+  .login-section button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%;
+  }
+
+  .login-section h2 {
+    font-size: 20px;
+  }
+
+  .login-section input {
+    padding: 6px;
+  }
+
+  .login-section button {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 300px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-20px);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+.toast.info {
+  background-color: #007bff;
+}
+
+.toast.warning {
+  background-color: #ffc107;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

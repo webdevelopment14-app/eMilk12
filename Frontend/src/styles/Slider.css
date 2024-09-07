@@ -1,0 +1,39 @@
+.auth-slider-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .auth-slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .auth-slider.slide-left {
+    transform: translateX(-100%);
+  }
+  
+  .auth-slider-inner {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .auth-slider-toggle {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .auth-slider-toggle button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-slider-toggle button:hover {
+    background-color: #0056b3;
+  }
+  

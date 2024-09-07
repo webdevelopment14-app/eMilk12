@@ -1,0 +1,56 @@
+.printable-delivery-list {
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.printable-delivery-list h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.printable-delivery-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.printable-delivery-list th,
+.printable-delivery-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.printable-delivery-list th {
+    background-color: #f5f5f5;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.printable-delivery-list td {
+    color: black;
+    font-size: 1em;
+}
+
+.printable-delivery-list tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.printable-delivery-list tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.printable-delivery-list thead {
+    border-bottom: 2px solid black;
+}
+
+.printable-delivery-list tbody tr {
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,19 @@
+.search-results {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.search-results h1 {
+    margin-bottom: 1rem;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,351 @@
+/* DeliveryList.css */
+
+/* Container for the button group, positioned at the bottom left corner */
+.button-group {
+    display: flex;
+    flex-direction: row; /* Arrange buttons horizontally */
+    align-items: center; /* Center-align buttons vertically */
+    justify-content: flex-start; /* Align buttons to the left */
+    position: absolute; /* Absolute positioning relative to the container */
+    bottom: 20px; /* Distance from the bottom of the container */
+    left: 20px; /* Distance from the left edge of the container */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Styles for buttons */
+.add-button,
+.delete-all-button,
+.download-button
+ {
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+.print-button
+ {
+    background-color: #004d40;
+    margin-left: 918px;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 1180px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+.logout-button {
+    margin-left: 19px;
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 1080px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+/* Hover styles */
+.add-button:hover,
+.delete-all-button:hover,
+.download-button:hover,
+.print-button:hover,
+.logout-button:hover {
+    background-color: #00796b;
+}
+
+/* Specific button styles */
+.add-button {
+    background-color: #004d40;
+}
+
+.delete-all-button {
+    background-color: #004d40;
+}
+
+.download-button {
+    background-color: #004d40;
+    
+}
+
+.print-button {
+    background-color: #004d40;
+}
+
+.logout-button {
+    background-color: #c62828; /* Rich red for logout */
+}
+
+/* Hover effects */
+.add-button:hover,
+.delete-all-button:hover,
+.download-button:hover,
+.print-button:hover {
+    background-color: #00796b; /* Darker green for hover */
+}
+
+.logout-button:hover {
+    background-color: #b71c1c; /* Darker red for hover */
+}
+
+/* General Delivery List Styles */
+.delivery-list {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #dcdcdc;
+    position: relative;
+}
+
+.delivery-list h1 {
+    margin-bottom: 20px;
+    color: #004d40;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.delivery-list th,
+.delivery-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.delivery-list th {
+    background-color: #004d40;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.delivery-list td {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Actions column styles */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions .details,
+.actions .edit,
+.actions .delete-button {
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.actions .details {
+    background-color: #1976d2; /* Bright blue */
+}
+
+.actions .edit {
+    background-color: #00796b; /* Deep teal */
+}
+
+.actions .delete-button {
+    background-color: #c62828; /* Rich red */
+}
+
+.actions .details:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+
+.actions .edit:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+.actions .delete-button:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* Delivery Detail Styles */
+.delivery-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #dcdcdc;
+    background-image: linear-gradient(to bottom right, #f9f9f9, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.delivery-detail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/white-linen.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.delivery-detail h1 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-detail .detail-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.delivery-detail .detail-item label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.delivery-detail .detail-item span {
+    display: block;
+    font-size: 22px;
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.delivery-detail .actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.delivery-detail .actions a,
+.delivery-detail .actions button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.delivery-detail .actions a::after,
+.delivery-detail .actions button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.delivery-detail .actions a:hover::after,
+.delivery-detail .actions button:hover::after {
+    opacity: 1;
+}
+
+.delivery-detail .actions .edit {
+    background: #00796b;
+    border-color: #004d40;
+}
+
+.delivery-detail .actions .delete {
+    background: #c62828;
+    border-color: #b71c1c;
+}
+
+.delivery-detail .actions .back {
+    background: #2196f3;
+    border-color: #1976d2;
+}
+
+.delivery-detail .actions a:hover,
+.delivery-detail .actions button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .delivery-detail {
+        padding: 20px;
+    }
+
+    .delivery-detail h1 {
+        font-size: 28px;
+    }
+
+    .delivery-detail .detail-item span {
+        font-size: 18px;
+    }
+
+    .delivery-detail .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .delivery-list h1 {
+        font-size: 28px;
+    }
+
+    .delivery-list th,
+    .delivery-list td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .button-group {
+        flex-direction: column; /* Arrange buttons vertically on smaller screens */
+        align-items: flex-start;
+    }
+}
